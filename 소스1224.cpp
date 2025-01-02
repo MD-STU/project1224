@@ -276,8 +276,323 @@
 //	int a;
 //	printf("숫자를 입력하시오 :");
 //	scanf("%d", &a);
-//	printf("%d")
+//	int b = a % 50;
+//	printf("%d", b);
+//	return 0;
 //}
 
 
+//#include<stdio.h>
+//int main()
+//{
+//	int data1 = 6 / 2;
+//	printf("%d=6/3\n", data1);
+//	int data2 = 6 / 3;
+//	printf("%d=6/3\n", data2);
+//	int data3 = 6 / 4;
+//	printf("%d=6/4", data3);
+//	return 0;
+//}
 
+//#include<stdio.h>
+//int main()
+//{
+//	int number1, number2;
+//	scanf("%d %d", &number1, &number2);
+//	printf("%d=", number1 / number2);
+//	printf("%d/%d\n", number1, number2);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int coin;
+//	printf("돈을 입력해주세요.(원)");
+//	scanf("%d", &coin);
+//
+//	int coin10000 = coin / 10000;
+//	coin = coin % 10000;
+//	int coin5000 = coin / 5000;
+//	coin = coin % 50000;
+//	int coin1000 = coin / 1000;
+//	printf("만원권 %d개,", coin10000);
+//	printf("오천원권 % d개", coin5000);
+//	printf("천원권 %d개,", coin1000);
+//	printf("나머지는 동전입니다.");
+//	return 0;
+//
+//
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int jelly;
+//	printf("천원이하의 젤리가격입력:\n");
+//	scanf("%d", &jelly);
+//	int mon = 1000 - jelly;
+//	int mon500 = mon / 500;
+//	mon = mon % 500;
+//	int mon100 = mon / 100;
+//	mon = mon % 100;
+//	int mon50 = mon / 50;
+//	mon = mon % 50;
+//	int mon10 = mon / 10;
+//	printf("500원 %d개\n", mon500);
+//	printf("100원 %d개\n", mon100);
+//	printf("50원 %d개\n", mon50);
+//	printf("10원 %d개\n", mon10);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include<stdlib.h>
+//int main()
+//{
+//	int randInt = rand() % 10;
+//	int nextInt = rand() % 10;
+//	printf("첫숫자 : %d\n", randInt);
+//	printf("다움숫자 :%d", nextInt);
+//
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<time.h>
+//int main()
+//{
+//	srand((unsigned int)time(NULL));
+//	int randInt = rand() % 10;
+//	int nextInt = rand() % 10+50;
+//	printf("첫숫자: %d\n", randInt);//0,9
+//	printf("다음숫자: %d\n", nextInt);//50,59
+//
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<time.h>
+//
+//int main()
+//{
+//	srand((unsigned int)time(NULL));
+//	printf("내 주머니에 있는 돈은");
+//	int myMoney = (rand() % 10 + 1) * 1000;// >>> 1000,10000
+//	printf("%d원이다.\n", myMoney);
+//	int coin500 = rand() % 4 * 500;// >>>>0,1500
+//	int coin100 = rand() % 5000;//0,4999
+//	coin100 = coin100 / 100 * 100;// >>>>>0,4900
+//	printf("그리고 과자의 가격은");
+//	printf("%d원이다.", coin500 + coin100);
+//	printf("\n나는 과자를 살 수 있을까?");
+//
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int apple = 15;
+//	if (apple == 15)
+//	{
+//		printf("apple운 15개 있습니다.\n");
+//
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int apple = 15;
+//	if (apple != 17)
+//	{
+//		printf("apple은 17개가아닙니다.\n");
+//
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int apple = 15;
+//	if (apple > 7)
+//	{
+//		printf("apple은 7개보다 많습니다.\n");
+//
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int apple = 15;
+//	if (apple < 20)
+//	{
+//		printf("apple은 20개보다 적습니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int apple = 15;
+//	if (apple)
+//	{
+//		printf("apple운 0개가 아닙니다.\n");
+//
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int apple =15;
+//	if (!apple)
+//	{
+//		printf("apple은 하나도 없습니다.\n");
+//
+//	}
+//
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int apple = 0;
+//	if (apple == 10)
+//	{
+//		printf("apple은 10개있습니다.\n");
+//
+//	}
+//	else if (apple == 0)
+//	{
+//		printf("apple은 하나도 없습니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int apple = 15;
+//	if (!apple)
+//	{
+//		printf("apple은 하나도 없습니다.\n");
+//
+//	}
+//	else
+//	{
+//		printf("apple은 0개가 아닙니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int a;
+//	printf("정수를 입력하시오 :");
+//	scanf("%d", &a);
+//	if (a > 0)
+//		printf("양수입니다.");
+//	else if (a < 0)
+//		printf("음수입니다.");
+//	else
+//		printf("0입니다.");
+//	
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int a;
+//	printf("양수를 입력하시오.");
+//	scanf("%d", &a);
+//	if (a >= 10 && a <= 99)
+//	{
+//		printf("두 자리 숫자입니다.");
+//
+//	}
+//	else
+//	{
+//		printf("두 자리 숫자가 아닙니다.");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int height = 170;
+//	if (height > 150)
+//	{
+//		printf("키가 150이상입니다.\n");
+//
+//	}
+//	if (height > 160)
+//	{
+//		printf("키가 160 이상입니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int height = 170;
+//	if (height > 150)
+//	{
+//		printf("키가 150이상입니다.\n");
+//	}
+//	else if (height > 160)
+//	{
+//		printf("키가 160이상입니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int y_age;
+//	printf("나이를 입력하시오.");
+//	scanf("%d", &y_age);
+//	if (y_age > 0)
+//	{
+//		printf("전체 관람가입니다.\n");
+//	}
+//	if (y_age >= 12)
+//	{
+//		printf("12세 관람가입니다.\n");
+//	}
+//	if (y_age >= 15)
+//	{
+//		printf("15세 관람가입니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	printf("영문자을 입력하시오 :");
+//	char initial;
+//	scanf("%c", &initial);
+//	if (initial >= 0x41 && initial <= 'Z')
+//	{
+//		printf("대문자입니다.");
+//	}
+//	else if (initial >= 97 && initial <= 122)
+//	{
+//		printf("소문자입니다.");
+//	}
+//	return 0;
+//}
+#include<stdio.h>
+int main()
+{
+	int number, answer;
+	scanf("%d %d", &number, &answer);
+	if (number > answer)
+	{
+		printf("숫자1이 숫자2보다큽니다.\n");
+	}
+}
