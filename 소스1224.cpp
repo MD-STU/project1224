@@ -887,15 +887,15 @@
 //		break;
 //	}return 0;
 //}
+//// 
 //#include<stdio.h>
 //int main()
 //{
 //	int input;
-//	int option = 3;
 //	printf("메뉴를 선택하세요.");
 //	printf("1.새 게임 2.이어하기 3.옵션\n");
 //	scanf("%d", &input);
-//
+//	const int Option = 3;
 //	switch (input) {
 //	case 1:
 //		printf("새 게임 시작\n");
@@ -903,10 +903,376 @@
 //	case 2:
 //		printf("세이브 데이터 로드\n");
 //		break;
-//	case 3:
+// 
+//	case Option:
 //		printf("옵션세팅\n");
 //		break;
 //	default:printf("지정된 기능이 없습니다.\n");
 //	}
 //	return 0;
 //}
+//
+//#include<stdio.h>
+//int main()
+//{
+//	printf("0~9 사이의 숫자를 입력하시오 :");
+//	int number;
+//	scanf("%d", &number);
+//	
+//	switch (number) {
+//	case 3: case 6:case 9:
+//		printf("짝");
+//		break;
+//	}
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	char command = 'x';
+//	switch (command) {
+//	case 'x':printf("알파벳 x 입력.\n");
+//		break;
+//
+//	case 'X':printf("엑스표 입력.\n");
+//		break;
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int i_menu;
+//	printf("1.더하기 2.빼기\n");
+//	scanf("%d", &i_menu);
+//	switch (i_menu) {
+//	case 1: {
+//		int number1, number2;
+//		printf("숫자 두개를 입력하세요.\n");
+//		scanf("%d %d", &number1, &number2);
+//		printf("%d + %d = %d\n",
+//			number1, number2, number1 + number2);
+//		break;
+//	}
+//	case 2: {
+//		int number3, number4;
+//		printf("숫자 두개를 입력하세요.\n");
+//		scanf("%d %d", &number3, &number4);
+//		printf("%d - %d = %d\n",
+//			number3, number4, number3 - number4);
+//		break;
+//	}
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main() {
+//	char input;
+//	printf("방향키를 입려하시오: ");
+//	scanf(" %c", &input);
+//	switch (input) {
+//	case 'w':
+//		printf("위 방향키를 입력하셨습니다.");
+//		break;
+//	case 's':
+//		printf("아래 방향키를 입력하셨습니다.");
+//		break;
+//	case'a':
+//		printf("좌 방향키를 입력하셨습니다.");
+//		break;
+//	case 'd':
+//		printf("우 방향키를 입력하셨습니다.");
+//		break;
+//	}
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//int main() {
+//	printf("음식을 주문하십시오:");
+//	printf("appetizer:1.케비어 2.샐러드 3.푸아그라");
+//	int appe;
+//	scanf("%d", &appe);
+//	switch (appe) {
+//	case 1: {
+//		int main;
+//		printf("mainDish:1.스테이크 2.생선요리3.양갈비\n");
+//		scanf("%d", &main);
+//		switch (main) 
+//		{
+//		case 1: {
+//			int dessert;
+//			printf("dessert 1.케익 2.아이스크림 3.초콜릿무스");
+//			scanf("%d", &dessert);
+//			switch (dessert) {
+//			case 1:
+//				printf("주문하신 음식은 케비어 스테이크 케익 입니다. ");
+//				break;
+//			case 2:
+//				printf("주문하신 음식은 케비어 스테이크 아이스크림입니다.");
+//				break;
+//			case 3:
+//				printf("주문하신 음식은 케비어 스테이크 초콜릿무스입니다.");
+//				break;
+//			}
+//			}
+//		case 2: {
+//			int dessert;
+//			printf("dessert 1.케익 2.아이스크림 3.초콜릿무스");
+//			scanf("%d", &dessert);
+//			switch (dessert) {
+//			case 1:
+//				printf("주문하신 음식은 케비어 생선요리 케익 입니다. ");
+//				break;
+//			case 2:
+//				printf("주문하신 음식은 케비어 생선요리 아이스크림입니다.");
+//				break;
+//			case 3:
+//				printf("주문하신 음식은 케비어 생선요리 초콜릿무스입니다.");
+//				break;
+//			}
+//			
+//		}
+//		case 3: {
+//			int dessert;
+//			printf("dessert 1.케익 2.아이스크림 3.초콜릿무스");
+//			scanf("%d", &dessert);
+//			switch (dessert) {
+//			case 1:
+//				printf("주문하신 음식은 케비어 양갈비 케익 입니다. ");
+//				break;
+//			case 2:
+//				printf("주문하신 음식은 케비어 양갈비 아이스크림입니다.");
+//				break;
+//			case 3:
+//				printf("주문하신 음식은 케비어 양갈비 초콜릿무스입니다.");
+//				break;
+//			}
+//		}
+//		}
+//
+//	}
+//	case 2: {
+//		int main;
+//		printf("mainDish:1.스테이크 2.생선요리3.양갈비\n");
+//		scanf("%d", &main);
+//		switch (main)
+//		{
+//		case 1: {
+//			int dessert;
+//			printf("dessert 1.케익 2.아이스크림 3.초콜릿무스");
+//			scanf("%d", &dessert);
+//			switch (dessert) {
+//			case 1:
+//				printf("주문하신 음식은 샐러드 스테이크 케익 입니다. ");
+//				break;
+//			case 2:
+//				printf("주문하신 음식은 샐러드 스테이크 아이스크림입니다.");
+//				break;
+//			case 3:
+//				printf("주문하신 음식은 샐러드 스테이크 초콜릿무스입니다.");
+//				break;
+//			}
+//		}
+//		case 2: {
+//			int dessert;
+//			printf("dessert 1.케익 2.아이스크림 3.초콜릿무스");
+//			scanf("%d", &dessert);
+//			switch (dessert) {
+//			case 1:
+//				printf("주문하신 음식은 샐러드 생선요리 케익 입니다. ");
+//				break;
+//			case 2:
+//				printf("주문하신 음식은 샐러드 생선요리 아이스크림입니다.");
+//				break;
+//			case 3:
+//				printf("주문하신 음식은 샐러드 생선요리 초콜릿무스입니다.");
+//				break;
+//			}
+//
+//		}
+//		case 3: {
+//			int dessert;
+//			printf("dessert 1.케익 2.아이스크림 3.초콜릿무스");
+//			scanf("%d", &dessert);
+//			switch (dessert) {
+//			case 1:
+//				printf("주문하신 음식은 샐러드 양갈비 케익 입니다. ");
+//				break;
+//			case 2:
+//				printf("주문하신 음식은 샐러드 양갈비 아이스크림입니다.");
+//				break;
+//			case 3:
+//				printf("주문하신 음식은 샐러드 양갈비 초콜릿무스입니다.");
+//				break;
+//			}
+//		}
+//	}
+//	}
+//	case 3: {
+//		int main;
+//		printf("mainDish:1.스테이크 2.생선요리3.양갈비\n");
+//		scanf("%d", &main);
+//		switch (main)
+//		{
+//		case 1: {
+//			int dessert;
+//			printf("dessert 1.케익 2.아이스크림 3.초콜릿무스");
+//			scanf("%d", &dessert);
+//			switch (dessert) {
+//			case 1:
+//				printf("주문하신 음식은 푸아그라 스테이크 케익 입니다. ");
+//				break;
+//			case 2:
+//				printf("주문하신 음식은 푸아그라 스테이크 아이스크림입니다.");
+//				break;
+//			case 3:
+//				printf("주문하신 음식은 푸아그라 스테이크 초콜릿무스입니다.");
+//				break;
+//			}
+//		}
+//		case 2: {
+//			int dessert;
+//			printf("dessert 1.케익 2.아이스크림 3.초콜릿무스");
+//			scanf("%d", &dessert);
+//			switch (dessert) {
+//			case 1:
+//				printf("주문하신 음식은 푸아그라 생선요리 케익 입니다. ");
+//				break;
+//			case 2:
+//				printf("주문하신 음식은 푸아그라 생선요리 아이스크림입니다.");
+//				break;
+//			case 3:
+//				printf("주문하신 음식은 푸아그라 생선요리 초콜릿무스입니다.");
+//				break;
+//			}
+//
+//		}
+//		case 3: {
+//			int dessert;
+//			printf("dessert 1.케익 2.아이스크림 3.초콜릿무스");
+//			scanf("%d", &dessert);
+//			switch (dessert) {
+//			case 1:
+//				printf("주문하신 음식은 푸아그라 양갈비 케익 입니다. ");
+//				break;
+//			case 2:
+//				printf("주문하신 음식은 푸아그라 양갈비 아이스크림입니다.");
+//				break;
+//			case 3:
+//				printf("주문하신 음식은 푸아그라 양갈비 초콜릿무스입니다.");
+//				break;
+//			}
+//		}
+//	}
+//
+//	}
+// 아까우니까 남겨둡니다. 모든 경우의 수를 나열한 거.
+
+
+
+//#include<stdio.h>
+//int main() {
+//	printf("appetizer 1.캐비어 2.샐러드 3.푸아그라\n");
+//	int appe;
+//	
+//	printf("mainDish 1.스테이크.생선요리 3.양갈비\n");
+//	int mainD;
+//	
+//	printf("dessert 1.케익 2.아이스크리 3.초콜릿무스\n");
+//	int deesr;
+//	scanf("%d %d %d",&appe,&mainD, &deesr);
+//	switch (appe)
+//	{
+//	case 1: printf("음식은 케비어,");
+//		break;
+//	case 2: printf("음식은 샐러드,");
+//		break;
+//	case 3: printf("음식은 푸아그라,");
+//		break;
+//	}
+//	switch (mainD)
+//	{
+//	case 1: printf(" 스테이크,");
+//		break;
+//	case 2: printf(" 생선요리,");
+//		break;
+//	case 3: printf(" 양갈비,");
+//		break;
+//	}
+//	switch (deesr)
+//	{
+//	case 1:printf("케잌입니다.");
+//		break;
+//	case 2:printf("아이스크림입니다.");
+//		break;
+//	case 3:printf("초콜릿무스입니다.");
+//		break;
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	while (i < 100)
+//	{
+//		
+//		printf("%3d", i);
+//		if (i >= 70 && i < 80)
+//		{
+//			i++;	continue;
+//		}
+//		printf("(%02x) ", i);
+//		if (i % 10 == 9)
+//			printf("\n");
+//		if (i == 93)
+//			break;
+//		i++;
+//
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main() {
+//	while (0)
+//	{
+//		printf("조건이 참일경우 반복출력\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	while (1)
+//	{
+//		printf("조건이 참일경우 반복출력\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main() {
+//	int count = 0;
+//	while (count < 3)
+//	{
+//		printf("현재 count : %d\n", count);
+//		printf("count가 3보다 작은동안 반복\n");
+//		count++;
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int count = 3;
+//	while (count > 0)
+//	{
+//		printf("현재 count : %d\n", count);
+//		printf("count가 0보다 큰 동안 반복\n");
+//		count--;
+//	}
+//	return 0;
+//}
+
