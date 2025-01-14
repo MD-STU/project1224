@@ -1276,3 +1276,172 @@
 //	return 0;
 //}
 
+//#include<stdio.h>
+//int main() {
+//	
+//	int count = 0;
+//	while (count < 6) 
+//	{
+//		printf("C\n");
+//		count++;
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int nu = -10;
+//	while (nu<=0)
+//	{
+//		printf("%d\n", nu);
+//		nu++;
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	
+//	int nu = 5;
+//	while (nu <= 100)
+//	{
+//		printf("%d\n", nu);
+//		nu += 5;
+//		
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int count = 3;
+//	while (count)
+//	{
+//		if (count == 1)
+//			break;
+//		printf("현재 count : %d\n", count);
+//		printf("count가 0이 아니면 반복\n");
+//		count--;
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	char alphabet;
+//	while (1) {
+//		printf("알파벳을 입력해주세요(다른것을 입력시 다시입력) :");
+//		scanf(" %c", &alphabet);
+//		if(alphabet >= 'a' && alphabet <= 'z')
+//		{
+//			printf("소문자를 입력하셨습니다\n");
+//		}
+//		else if (alphabet >= 'A' && alphabet <= 'Z')
+//		{
+//			printf("대문자를 입력하셨습니다.\n");
+//		}
+//		else { continue; }
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int number, total = 0;
+//	while (1) {
+//		printf("양수를 입력해주세요(0입력시 종료) :");
+//		scanf("%d", &number);
+//		if (number == 0) { break; }
+//		else if (number < 0) { continue; }
+//		total = total + number;
+//		printf("%d\n", total);
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int number = 1;
+//	int multi = 1;
+//	while (1) {
+//		multi = multi * number;
+//		if (multi >= 50000) {
+//			printf("%d", number);
+//			break;
+//		}
+//		number++;
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	char alpha = 'A';
+//	while (alpha <= 'Z') {
+//		if (alpha != 'F') {
+//			printf("%c ", alpha);
+//		}
+//		alpha++;
+//	}
+//	return 0;
+//}
+#include<stdio.h>
+int main()
+{	
+	int ord=0;
+	int plus=0;
+	int number;
+	printf("베스킨라빈스 게임\n");
+	printf("1~3사이의 숫자를 입력하시오:\n");
+	int turn = 0;
+	while (1) {
+		if (turn == 0) {
+			printf("A: ");
+			scanf("%d", &number);
+			if (number <= 3 && number >= 1) {
+				plus = plus + number;
+				printf("=> %d\n", plus);
+			}
+			else {
+				printf("숫자를 다시 입력하시오.\n");
+				turn = 1;
+			}
+		}
+		else {
+			printf("B: ");
+			scanf("%d", &number);
+			if (number <= 3 && number >= 1) {
+				plus = plus + number;
+				printf("=> %d\n", plus);
+			}
+			else{
+				printf("숫자를 다시 입력하시오.\n");
+				turn = 0;
+			}
+		}
+		
+		
+		
+
+		if (turn == 0) {
+			turn = 1;
+		}
+		else {
+			turn = 0;
+		}
+		if (plus >= 31)
+		{
+			break;
+		}
+		
+	}
+
+
+	if (ord == 0) {
+		printf("A패배\n");
+	}
+	else if (ord == 1) {
+		printf("B패배\n");
+	}
+	return 0;
+}
