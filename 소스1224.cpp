@@ -1385,63 +1385,208 @@
 //	}
 //	return 0;
 //}
+//#include<stdio.h>
+//int main()
+//{
+//	int plus = 0;
+//	int number;
+//	printf("베스킨라빈스 게임\n");
+//	printf("1~3사이의 숫자를 입력하시오:\n");
+//	int turn = 0;
+//	while (1) {
+//		printf("%c: ", 'A' + turn);
+//		scanf("%d", &number);
+//		if (number > 3 || number < 1) {
+//			printf("숫자를 다시 입력하시오.\n");
+//			continue;
+//		}
+//
+//		plus = plus + number;
+//		printf("=> %d\n", plus);
+//
+//		if (plus >= 31) break;
+//		
+//		turn = !turn;
+//		//turn = ++turn % 26;
+//	}
+//	printf("%c패배\n", 'A' + turn);
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int temperature = 20;
+//	do
+//	{
+//		printf("현재 온도 : %d도\n", temperature);
+//		temperature--;
+//
+//	} while (temperature > 28);
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int input;
+//	enum{GAMEOVER, NEWGAME, LOADGAME,OPTION};
+//	do {
+//		printf("\n메뉴를 선택하세요.\n");
+//		printf("1.새 게임 2. 이어하기 3.옵션 (0:게임종료)\n");
+//		scanf("%d", &input);
+//
+//		switch (input) {
+//		case NEWGAME:
+//			printf("새 게임 시작\n");
+//			break;
+//		case LOADGAME:
+//			printf("세이브 데이터 로드\n");
+//			break;
+//		case OPTION:
+//			printf("옵션 세팅\n");
+//			break;
+//
+//		}
+//		
+//		
+//	} while (input != GAMEOVER);
+//	printf("게임을 종료합니다.\n");
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int select;
+//	do {
+//		printf("\n메뉴를 선택하세요 :\n");
+//		printf("1.로그인 2.회원가입.3옵션 4.만든사람들\n");
+//		scanf("%d", &select);
+//
+//		switch (select) {
+//		case 1:
+//			printf("로그인 시작\n");
+//			break;
+//		case 2:
+//			printf("회원가입 시작\n");
+//			break;
+//		case 3:
+//			printf("옵션으로 이동합니다.\n");
+//			break;
+//		case 4:
+//			printf("만든 사람들 : 민덕현\n");
+//			break;
+//		}
+//	} while (select <= 4 && select >=1);
+//	printf("종료됐습니다.");
+//	return 0;
+//}
 #include<stdio.h>
-int main()
-{	
-	int ord=0;
-	int plus=0;
-	int number;
-	printf("베스킨라빈스 게임\n");
-	printf("1~3사이의 숫자를 입력하시오:\n");
-	int turn = 0;
-	while (1) {
-		if (turn == 0) {
-			printf("A: ");
-			scanf("%d", &number);
-			if (number <= 3 && number >= 1) {
-				plus = plus + number;
-				printf("=> %d\n", plus);
-			}
-			else {
-				printf("숫자를 다시 입력하시오.\n");
-				turn = 1;
-			}
-		}
-		else {
-			printf("B: ");
-			scanf("%d", &number);
-			if (number <= 3 && number >= 1) {
-				plus = plus + number;
-				printf("=> %d\n", plus);
-			}
-			else{
-				printf("숫자를 다시 입력하시오.\n");
-				turn = 0;
-			}
-		}
-		
-		
-		
+#include<stdlib.h>
+#include<time.h>
 
-		if (turn == 0) {
-			turn = 1;
+int main()
+{
+	srand((unsigned int)time(NULL));
+	int command;
+	int day = 0;
+	int study = 0;
+	int read = 0;
+	int football = 0;
+
+	do {
+		printf("\n%d번째 날!\n", ++day);
+		printf("오늘은 뭘 할까요?\n");
+		printf("1.코딩공부한다. 2.책을 읽는다. 3.축구를 한다.\n");
+		printf("그외. 끝낸다.\n >>");
+		scanf("%d", &command);
+
+
+		if (command == 1) {
+
+			int randInt = rand() % 5 + 1;
+			switch (randInt) {
+			case 1:
+				printf("기본이 좋네요.\n");
+			case 3:
+				printf("도서관에서 ");
+				break;
+			case 2:
+				printf("기분이 나빠요.\n");
+			case 4:
+				printf("카페에서 ");
+			case 5:
+				printf("학원에서 ");
+			}
+			printf("코딩공부합니다.\n");
+			study++;
 		}
-		else {
-			turn = 0;
+		else if (command == 2 ) {
+			int randInt = rand() % 5 + 1;
+			switch (randInt) {
+			case 1:
+				printf("기본이 좋네요.\n");
+			case 3:
+				printf("도서관에서 ");
+				break;
+			case 2:
+				printf("기분이 나빠요.\n");
+			case 4:
+				printf("카페에서 ");
+			case 5:
+				printf("집에서 ");
+			}
+			printf("책을 읽습니다.\n");
+			read++;
 		}
-		if (plus >= 31)
+		else if (command == 3) {
+			int randInt = rand() % 5 + 1;
+			switch (randInt) {
+			case 1:
+				printf("기본이 좋네요.\n");
+			case 3:
+				printf("공터에서 ");
+				break;
+			case 2:
+				printf("무릎이 아파요.\n");
+			case 4:
+				printf("학교에서 ");
+			case 5:
+				printf("마당에서 ");
+			}
+			printf("축구를 합니다.\n");
+			football++;
+		}
+		else break;
+	} while (1);
+	if (day <= 3) {
+		printf("그대로 입니다...\n");
+	}
+
+	else if (study>read && study>football ) {
+		int level = study / 8;
+		switch (level)
 		{
+		case 0:
+			printf("코딩새싹이 되었습니다!\n");
+			break;
+		case 1:
+			printf("프로그래머가 되었습니다!\n");
+			break;
+		case 2:
+			printf("FrontEnd 개발자가 되었습니다!\n");
+			break;
+		case 3:
+			printf("BackEnd 개발자가 되었습니다!\n");
+			break;
+		
+		default:
+			printf("플스택 개발자가 되었습니다!\n");
 			break;
 		}
+	
+	}
+	else
+	{
 		
-	}
-
-
-	if (ord == 0) {
-		printf("A패배\n");
-	}
-	else if (ord == 1) {
-		printf("B패배\n");
 	}
 	return 0;
 }
