@@ -1933,3 +1933,511 @@
 //	int student;
 //	for(myClass = 1;)
 //}
+//
+//#include<stdio.h>
+//int main()
+//{
+//	int input1, input2;
+//	int i = 1;
+//	printf("시작값 ==> ");
+//	scanf(" %d", &input1);
+//	printf("끝값 ==> ");
+//	scanf(" %d", &input2);
+//
+//	int start = input1;
+//	int end = input2;
+//
+//	if (start > end) {
+//		start = input2;
+//		end = input1;
+//	}
+//
+//	while (start <= end)
+//	{
+//		if (end % 2 != 0)
+//		{
+//			printf("%d\n", start);
+//		}
+//		start += 1;
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int ten = 1;
+//	int input1;
+//	printf("숫자를 여러 개 입력 :");
+//	scanf("%d", &input1);
+//	int copy_num = input1;
+//	while (copy_num) {
+//		copy_num /= 10;
+//		ten *= 10;
+//	}
+//	ten /= 10;
+//
+//	printf("%d의 자릿수\n", ten);
+//
+//	/*while (ten) {
+//		int a = input1 / ten;
+//		printf("%d\n", a);
+//		input1 = input1 % ten;
+//		ten /= 10;
+//		
+//	}*/
+//
+//	while (ten) {
+//		int a = input1 / ten;
+//		while (a > 0) {
+//			printf("\u2665\u2665");
+//			a--;
+//		}
+//		printf("\n");
+//		input1 = input1 % ten;
+//		ten /= 10;
+//
+//	}
+//
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int myClass =1; 
+//	int student;
+//	for (student = 1; student <= 3; student++) {
+//		printf("%d반 %d반\n", myClass, student);
+//	}
+//
+//	myClass++;
+//	for (student = 1; student <= 3; student++) {
+//		printf("%d반 %d반 \n", myClass, student);
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int myClass;
+//	int student;
+//	for (myClass = 1; myClass <=  2; myClass++) {
+//		
+//		for (student = 1; student <= 3; student++) {
+//			printf("%d반 %d번\n", myClass, student);
+//		}
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int grade;
+//	int myClass;
+//	int student;;
+//	for (grade = 1; grade <= 8; grade++)
+//	{
+//		for (myClass = 1; myClass <= 8; myClass++)
+//		{
+//			for(student = 1; student<=30;student++)
+//				printf("%d학년 %d반 %d번\n", grade, myClass, student);
+//		}
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int num1, num2;
+//	int result ;
+//	for (num1 = 2; num1 <= 9; num1++) {
+//		for (num2 = 1; num2 <= 9; num2++) {
+//			int result = num1 * num2;
+//			printf("%d X %d = %d\n\n", num1, num2, result);
+//		}
+//	}
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int num1, num2;
+//	int result;
+//	for (num1 = 2; num1 <= 9; num1++) {
+//			if (num1 == 3)
+//				continue;
+//		for (num2 = 1; num2 <= 9; num2++) {
+//			int result = num1 * num2;
+//			printf("%d x %d = %d\n\n", num1, num2, result);
+//		}
+//	}
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	
+//	int i;
+//	int j ;
+//	for (i = 1; i <= 4; i++) {
+//		for (j = 1; j <= 6; j++)
+//		{
+//			printf("4면 - %d, 6면 - %d\n", i, j);
+//		}
+//
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int outer;
+//	int inter;
+//	for (outer = 0; outer < 5; outer++) {
+//		printf("%d번째 내부 반복문 진입 \n", outer);
+//
+//		for (inter = 0; inter < 5; inter++) {
+//			printf("내부 반복문 %d 번 반복\n", inter);
+//		}
+//		printf("%d번째 내부 반복문 탈출\n\n", outer);
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int outer;
+//	int inter;
+//	for (outer = 0; outer < 5; outer++) {
+//		for (inter = 0; inter < 5; inter++) {
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//	return 0 ;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int outer, inter1,inter2;
+//	for (outer = 0; outer < 5; outer++) {
+//		for (inter1 = 0; inter1 < 5 - outer; inter1++) {
+//			printf(" ");
+//		}
+//		for (inter2 = 0; inter2 < outer + 1; inter2++) {
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int outer;
+//	int inter1, inter2;
+//	for (outer = 0; outer < 5; outer++) {
+//		for (inter1 = 0; inter1 < 5 - outer; inter1++) {
+//			printf(" ");
+//		}
+//		for (inter2 = 0; inter2 < outer + 1; inter2++) {
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int inter;
+//	int outer;
+//	for (outer = 4; outer > 0; outer--) {
+//		for (inter = outer; inter > 0; inter--) {
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	1/*printf("*");
+//	printf("\n");
+//	printf("*");
+//	printf("*");
+//	printf("\n");
+//	printf("*");
+//	printf("*");
+//	printf("*");
+//	printf("\n");*/
+//
+//	2/*for (int x = 1; x <= 1; x++) {
+//		printf("*");
+//	}
+//	printf("\n");
+//	for (int x = 1; x <= 2; x++) {
+//		printf("*");
+//	}
+//	printf("\n");
+//	for (int x = 1; x <= 3; x++) {
+//		printf("*");
+//	}
+//	printf("\n");*/
+//
+//	3/*int y = 1;
+//	for (int x = 1; x <= y; x++) {
+//		printf("*");
+//	}
+//	printf("\n");
+//	y++;
+//
+//	for (int x = 1; x <= y; x++) {
+//		printf("*");
+//	}
+//	printf("\n");
+//	y++;
+//
+//	for (int x = 1; x <= y; x++) {
+//		printf("*");
+//	}
+//	printf("\n");
+//	y++;*/
+//
+//	4/*int y = 1;
+//	for(;y<=3;)
+//	{
+//		for (int x = 1; x <= y; x++) {
+//			printf("*");
+//		}
+//		printf("\n");
+//		y++;
+//	}*/
+//
+//	
+//	5/*for (int y = 1; y <= 3;y++)
+//	{
+//		for (int x = 1; x <= y; x++) {
+//			printf("*");
+//		}
+//		printf("\n");
+//	}*/
+//
+//	int LINE = 3;
+//	scanf("%d", &LINE);
+//	for (int y = 1; y <= LINE; y++)
+//	{
+//		for (int x = 1; x <= y; x++) {
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+////}
+//#include<stdio.h>
+//int main()
+//{
+//	/*printf("*");
+//	printf("*");
+//	printf("*");
+//	printf("*");
+//	printf("\n");
+//	printf("*");
+//	printf("*");
+//	printf("*");
+//	printf("\n");
+//	printf("*");
+//	printf("*");
+//	printf("\n");
+//	printf("*");*/
+//
+//	/*for (int i = 4; i >= 1; i--) {
+//		printf("*");
+//	}
+//	printf("\n");
+//
+//	for (int i = 3; i >= 1; i--) {
+//		printf("*");
+//	}
+//	printf("\n");
+//
+//	for (int i = 2; i >= 1; i--) {
+//		printf("*");
+//	}
+//	printf("\n");
+//
+//	for (int i = 1; i >= 1; i--) {
+//		printf("*");
+//	}
+//	printf("\n");*/
+//
+//	/*int x;
+//	int y = 4;
+//	for (x = 1; x <= y; x++) {
+//		printf("*");
+//	}
+//	printf("\n");
+//	y--;
+//
+//	for (x = 1; x <= y; x++) {
+//		printf("*");
+//	}
+//	printf("\n");
+//	y--;
+//
+//	for (x = 1; x <= y; x++) {
+//		printf("*");
+//	}
+//	printf("\n");
+//	y--;
+//
+//	for (x = 1; x <= y; x++) {
+//		printf("*");
+//	}
+//	printf("\n");
+//	y--;*/
+//
+//	/*int y = 4;
+//	for (; y > 0;) {
+//		for (int x = 1; x <= y; x++) {
+//			printf("*");
+//		}
+//		printf("\n");
+//		y--;
+//	}*/
+//	
+//	
+//	/*for (int y = 4; y > 0; y--) {
+//		for (int x = 1; x <= y; x++) {
+//			printf("*");
+//		}
+//		printf("\n");
+//	}*/
+//	int line;
+//	scanf("%d", &line);
+//	for (int y = line; y >0; y--) {
+//		for (int x = 1; x <= y; x++) {
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//}
+#include<stdio.h>
+int main()
+{
+	/*printf(" ");
+	printf(" ");
+	printf(" ");
+	printf("*");
+	printf("\n");
+	printf(" ");
+	printf(" ");
+	printf("*");
+	printf("*");
+	printf("*");
+	printf("\n");
+	printf(" ");
+	printf("*");
+	printf("*");
+	printf("*");
+	printf("*");
+	printf("*");
+	printf("\n");
+	printf("*");
+	printf("*");
+	printf("*");
+	printf("*");
+	printf("*");
+	printf("*");
+	printf("*");*/
+
+	/*for (int x = 3; x > 0; x--) {
+		printf(" ");
+	}
+	for (int y = 1; y > 0; y--) {
+		printf("*");
+	}
+	printf("\n");
+
+	for (int x = 2; x > 0; x--) {
+		printf(" ");
+	}
+	for (int y = 3; y > 0; y--) {
+		printf("*");
+	}
+	printf("\n");
+
+	for (int x = 1; x > 0; x--) {
+		printf(" ");
+	}
+	for (int y = 5; y > 0; y--) {
+		printf("*");
+	}
+	printf("\n");
+
+	for (int x = 0; x > 0; x--) {
+		printf(" ");
+	}
+	for (int y = 7; y > 0; y--) {
+		printf("*");
+	}
+	printf("\n");*/
+
+	/*int y = 3;
+	int z = 1;
+	for (int x = y; x > 0; x--) {
+		printf(" ");
+	}
+	y--;
+	for (int x = z; x > 0; x--) {
+		printf("*");
+	}
+	z += 2;
+	printf("\n");
+	
+	for (int x = y; x > 0; x--) {
+		printf(" ");
+	}
+	y--;
+	for (int x = z; x > 0; x--) {
+		printf("*");
+	}
+	z += 2;
+	printf("\n");
+
+	for (int x = y; x > 0; x--) {
+		printf(" ");
+	}
+	y--;
+	for (int x = z; x > 0; x--) {
+		printf("*");
+	}
+	z += 2;
+	printf("\n");
+
+	for (int x = y; x > 0; x--) {
+		printf(" ");
+	}
+	y--;
+	for (int x = z; x > 0; x--) {
+		printf("*");
+	}
+	z += 2;
+	printf("\n");*/
+
+	
+	int z = 1;
+	for (int y = 3; y >= 0;y--)
+	{
+		for (int x = y; x > 0; x--) {
+			printf("_");
+		}
+
+		
+		for (int x = z; x > 0; x--) {
+			printf("*");
+		}
+		z += 2;
+		printf("\n");
+	}
+}
+
+
+	
