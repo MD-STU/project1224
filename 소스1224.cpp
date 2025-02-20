@@ -3304,41 +3304,283 @@
 //	return 0;
 //}
 
+//#include<stdio.h>
+//int add_number(int num1, int num2)
+//{
+//	int retval1 = num1 + num2;
+//	return retval1;
+//}
+//
+//int gap_number(int num1, int num2)
+//{
+//	int retval2 = num1 - num2;
+//	return retval2;
+//}
+//
+//int multi_number(int num1, int num2)
+//{
+//	int retval3 = num1 * num2;
+//	return retval3;
+//}
+//
+//float dv_number(int num1, int num2)
+//{
+//	float retval4 =num1 / (float) num2;
+//
+//	return retval4;
+//}
+//
+//int main()
+//{
+//	int a = 5, b = 2;
+//	int data1 = add_number(a, b);
+//	int data2 = gap_number(a, b);
+//	int data3 = multi_number(a, b);
+//	double data4 = dv_number(a, b);
+//	printf("결과 : %d\n", data1);
+//	printf("결과 : %d\n", data2);
+//	printf("결과 : %d\n", data3);
+//	printf("결과 : %.1f\n", data4);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int minus(int n)
+//{
+//	if (n <= 1) return -3;
+//	return minus(n - 1) - 2;
+//
+//}
+//int main()
+//{
+//	int n; scanf("%d", &n);
+//	printf("%d", minus(n));
+//	return 0;
+//}
+
+//#include<stdio.h>
+//void printNumber(int n)
+//{
+//	if (n <= 0) return;
+//	printf("%d", n);
+//	printNumber(n - 1);
+//}
+//
+//int main()
+//{
+//	int n;
+//	scanf("%d", &n);
+//	printNumber(n);
+//	return 0;
+//}
+//#include<stdio.h>
+//int fibonacci(int n)
+//{
+//	printf("%d", n);
+//	if (n <= 2) return 1;
+//	printf("(%d)\n", n);
+//	return fibonacci(n - 1) + fibonacci(n - 2);
+//
+//}
+//
+//int main()
+//{
+//	int n;
+//	scanf("%d", &n);
+//	printf("\n%d\n", fibonacci(n));
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int hap(int n)
+//{	
+//	
+//	if (n <= 0) return 0;
+//	return n + hap(n - 1);
+//}
+//
+//int main()
+//{	
+//	int n;
+//	scanf("%d", &n);
+//	printf("%d\n", hap(n));
+//}
+
+//#include<stdio.h>
+//
+//struct BYTE
+//{
+//	char a;
+//	char b;
+//
+//};
+//
+//int main()
+//{
+//	struct BYTE a;
+//	a.a = 10;
+//	a.b = 20;
+//	printf("%d %d", a.a, a.b);
+//}
+
+
+//#include<stdio.h>
+//struct student
+//{
+//	int id;
+//	char* name;
+//	float aver;
+//
+//};
+//
+//void main()
+//{
+//	struct student s =
+//	{ 1, (char*)"이샘",90.5 };
+//	printf("아이디 : %d\n", s.id);
+//	printf("이름 : %s\n", s.name);
+//	printf("백분율 : %.1f\n", s.aver);
+//}
+//#include<stdio.h>
+//struct GUN
+//{
+//	char name[10];
+//	float bullet_type;
+//	bool scope;
+//	bool muzzle;
+//	bool handgrip;
+//	bool magazine;
+//	bool tactical_stock;
+//	int magazine_size;
+//};
+//int main()
+//{
+//	struct GUN M416 = { "M416",5.56, true,
+//	true,true,true,true,30 };
+//	printf("화기명 :%s\n",M416.name);
+//	printf("탄 종류 : %.2lf\n",
+//		M416.bullet_type);
+//	printf("스코프유무 : %s",
+//		M416.scope ? "true" : "false");
+//		
+//	return 0;
+//}
+
+//#include<stdio.h>
+//
+//struct __dummy__ {
+//	int data_0;
+//	char data_1;
+//	char data_2;
+//};
+//
+//struct VIP_PERSON {
+//	char grade;
+//	char personCode;
+//	char mileage;
+//};
+//
+//int main()
+//{
+//	/*int sizedummy = sizeof(__dummy__);
+//	int sizevip = sizeof(VIP_PERSON);
+//	printf("더미 크기 :%d\n", sizedummy);
+//	printf("vip정보 크기 : %d\n", sizevip);
+//
+//	return 0;*/
+//
+//	VIP_PERSON lee_sam;
+//	printf("고객 등급을 입력하세요\n");
+//	while (true) {
+//		scanf(" %c", &lee_sam.grade);
+//		if (lee_sam.grade == 'S' ||
+//			'A' <= lee_sam.grade &&
+//			lee_sam.grade <= 'D')
+//			break;
+//	}
+//
+//	int tmp;
+//	printf("고객 코드를 입력하세요\n");
+//	scanf("%d", &tmp);
+//	lee_sam.personCode = (char)tmp;
+//	printf("마일리지를 입력하세요\n");
+//	scanf("%d", &tmp);
+//	lee_sam.mileage = (char)tmp;
+//	printf("%c %d %d\n", lee_sam.grade,
+//		lee_sam.personCode, lee_sam.mileage);
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//struct score {
+//	int language;
+//	int math;
+//};
+//
+//struct fruit {
+//	char apple;
+//	char banna;
+//	char strobe;
+//	char bae;
+//	char dori;
+//	char podo;
+//	short carro;
+//	
+//};
+//int main()
+//{
+//	int sizescore = sizeof(fruit);
+//	printf("%d\n", sizescore);
+//}
+
+//#include<stdio.h>
+//struct __dummy__ {
+//	int data_0;
+//	char data_1;
+//	float data_2;
+//};
+//
+//int main()
+//{
+//	__dummy__ a;
+//	
+//	printf("나이를 입력하세요.\n");
+//	scanf("%d", &a.data_0);
+//
+//	
+//	printf("이름을 입력하세요.\n");
+//	scanf(" %c", &a.data_1);
+//
+//	printf("키를 입력하세요.\n");
+//	scanf("%f", &a.data_2);
+//	
+//	
+//	printf("이름 : %c\n", a.data_1);
+//	printf("나이 : %d\n", a.data_0);
+//	printf("키 : %f\n", a.data_2);
+//}
+
+//#include<stdio.h>
+//
+//void main()
+//{
+//	short pt;
+//	scanf("%hd", &pt);
+//	printf("값 : %hd\n", pt);
+//
+//}
+
 #include<stdio.h>
-int add_number(int num1, int num2)
+
+short getDefaultData()
 {
-	int retVal1 = num1 + num2;
-	return retVal1;
+	short pt1;
+	scanf("%hd", &pt1);
+	return pt1;
 }
 
-int gap_number(int num1, int num2)
+void main()
 {
-	int retVal2 = num1 - num2;
-	return retVal2;
-}
 
-int multi_number(int num1, int num2)
-{
-	int retVal3 = num1 * num2;
-	return retVal3;
-}
-
-double dv_number(int num1, int num2)
-{
-	double retVal4 = num1 / num2;
-	return retVal4;
-}
-
-int main()
-{
-	int a = 5, b = 2;
-	//int data1 = add_number(a, b);
-	//int data2 = gap_number(a, b);
-	//int data3 = multi_number(a, b);
-	double data4 = dv_number(a, b);
-	//printf("결과 : %d\n", data1);
-	//printf("결과 : %d\n", data2);
-	//printf("결과 : %d\n", data3);
-	printf("결과 : %.1lf\n", data4);
-	return 0;
 }
