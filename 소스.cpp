@@ -1,164 +1,265 @@
-//#define _CRT_SECURE_NO_WARNIGS
 //#include<stdio.h>
 //void main()
 //{
-//	int a, b;
+//	int b = 100;
+//	int* pB = &b;
 //
-//	while (1)
-//	{
-//		printf("더할 두 수 입력(멈추려면0을 입력) :");
-//		scanf_s("%d %d", &a, &b);
-//
-//		if (a == 0)
-//			break;
-//		printf("%d + %d = %d\n", a, b, a + b);
-//
-//	}
-//	printf("0을 입력해서 for문을 탈출했습니다.\n");
+//	printf("b = %d\n", b);
+//	printf("b = %x\n", &b);
+//	printf("b= %d\n", *pB);
+//	printf("b = %x\n\n", pB);
 //}
 
 //#include<stdio.h>
-//void main()
-//{
-//	int hap = 0;
-//	int i;
+//void main() {
+//	char a = 'A';
+//	char* pA = &a;
 //
-//	for (i = 1; i <= 100; i++)
-//	{
-//		if (i % 3 == 0)
-//			continue;
+//	int b = 100;
+//	int* pB = &b;
 //
-//		hap += i;
-//	}
-//	printf("1~100까지의 합(3의 배수 제외): %d\n", hap);
+//	double c = 3.14;
+//	double* pC = &c;
+//
+//	printf("pA의 크기  : %d byte\n", sizeof(pA));
+//	printf("pB의 크기  : %d byte\n", sizeof(pB));
+//	printf("pC의 크기  : %d byte\n", sizeof(pC));
+//
+//	printf("pA의 크기  : %d byte\n", sizeof(*pA));
+//	printf("pB의 크기  : %d byte\n", sizeof(*pB));
+//	printf("pC의 크기  : %d byte\n", sizeof(*pC));
 //}
-//
+
 //#include<stdio.h>
-//int main()
-//{
-//	char ch;
-//	char* p;
-//	char* q;
-//	
-//	ch = 'A';
-//	p = &ch;
-//	q = p;
+//int main() {
+//	char str[] = "programming";
+//	char* ptr1,* ptr2;
 //
-//	*p = 'Z';
-//	printf("ch가 가지고 있는값: ch ==> %c \n\n", ch);
+//	ptr1 = &str[0];
+//	ptr2 = &str[7];
+//
+//	printf("%x\n", ptr1 + 1);
+//	printf("%c\n", *(ptr1 + 1));
+//
+//	printf("%x\n", ptr1 + 3);
+//	printf("%c\n\n", *(ptr1 + 3));
+//}
+
+//#include<stdio.h>
+//int main() {
+//	int* numPtr;
+//	int num1 = 10;
+//	int num2 = 20;
+//
+//	numPtr = &num1;
+//	printf("%d\n", *numPtr);
+//	numPtr = &num2;
+//	printf("%d\n", *numPtr);
+//
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main() {
+//	int number[2] = { 1,2 };
+//	void* p = number;
+//
+//	printf("%d\n", *(int*)p);
+//
+//	return 0;
+//}
+//#include<stdio.h>
+//int main() {
+//	int fibonacci[5] = { 3,5,8,13,21 };
+//	int* ptrFibo;
+//	ptrFibo = fibonacci;
+//
+//	int* ptrFibo1 = &fibonacci[1];
+//	int* ptrFibo4 = fibonacci + 4;
+//	printf("> %d - %d", *ptrFibo4, *ptrFibo1);
+//	printf(">> %d\n", ptrFibo4 - ptrFibo1);
+//
+//	printf("%d ", ptrFibo[1]);
+//	printf("%d ", ptrFibo1[0]);
+//	printf("%d ", ptrFibo4[-1]);
+//
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main() {
+//	int numArr[5] = { 11,22,33,44,55 };
+//	int* numPtrA;
+//	void* ptr;
+//
+//	numPtrA = &numArr[2];
+//	ptr = numArr;
+//
+//	printf("%d\n", *(numPtrA - 1));
+//	printf("%d\n", *((int*)ptr+4));
+//}
+
+//#include<stdio.h>
+//int main() {
+//
+//	int arr[5];
+//	for (int i = 0; i < 5; i++) {
+//		scanf("%d", &arr[i]);
+//	}
+//	printf("\n\n");
+//	for (int i = 0; i < 5; i++) {
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main() {
+//	int c=1;
+//	int a[10];
+//	for (int i = 0; i < 10; i++) {
+//		scanf("%d", &a[i]);
+//
+//	}
+//	int b;
+//	while (c) {
+//		scanf("%d", &b);
+//		for (int i = 0; i < 10; i++) {
+//			if (a[i] == b) {
+//				printf("exist");
+//				c--;
+//				break;
+//			}
+//		}
+//	}
 //
 //}
 
 //#include<stdio.h>
 //int main() {
-//	char s[8] = "Basic-C";
-//	char* p;
 //
-//	p = s;
-//	printf("&s[3]==>%s\n", &s[3]);
-//	printf("*(p+3)==> %c\n", *(p + 3));
+//	int num[4] = { 4,3,1,2 };
+//	int temp = 0;
+//	for (int j = 0; j < 4; j++) {
+//		for (int i = 1; i < 4; i++) {
 //
+//			if (num[i - 1] > num[i]) {
+//
+//				temp = num[i];
+//				num[i] = num[i - 1];
+//				num[i - 1] = temp;
+//
+//			}
+//
+//		}
+//	}
+//
+//
+//	for (int i = 0; i < 4; i++) {
+//		printf("%d ", num[i]);
+//	}
 //}
 
 //#include<stdio.h>
-//int main()
-//{
-//	for (int i = 0; i < 5; i++)
-//	{	
-//		for (int k = 0; k < 5 - i; k++) { printf(" "); }
-//		for (int j = 0; j <= i; j++)
-//		{
-//			printf("*");
-//		}
-//		printf("\n");
+//int main() {
+//	
+//	int num[4] ;
+//	for (int k = 0; k < 4; k++) {
+//		scanf("%d", &num[k]);
+//	}
+//	int temp = 0;
+//
+//	
+//	if (num[0]>num[1]) {
+//
+//		temp = num[1];
+//		num[1] = num[0];
+//		num[0] = temp;
+//
+//	}
+//	
+//	if (num[1] > num[2]) {
+//
+//		temp = num[2];
+//		num[2] = num[1];
+//		num[1] = temp;
+//
+//	}
+//	
+//	if (num[2] > num[3]) {
+//
+//		temp = num[3];
+//		num[3] = num[2];
+//		num[2] = temp;
+//
 //	}
 //
-//	return 0;
+//	if (num[0] > num[1]) {
+//
+//		temp = num[1];
+//		num[1] = num[0];
+//		num[0] = temp;
+//
+//	}
+//
+//	if (num[1] > num[2]) {
+//
+//		temp = num[2];
+//		num[2] = num[1];
+//		num[1] = temp;
+//
+//	}
+//
+//	if (num[0] > num[1]) {
+//
+//		temp = num[1];
+//		num[1] = num[0];
+//		num[0] = temp;
+//
+//	}
+//
+//	for (int i = 0; i < 4; i++) {
+//		printf("%d ", num[i]);
+//	}
+//}
+
+//B
+//#include<stdio.h>
+//int main() {
+//
+//	int num[4];
+//	for (int k = 0; k < 4; k++) {
+//		scanf("%d", &num[k]);
+//	}
+//
+//	int temp = 0;
+//	
+//	for(int j = 3;j>=1;j--){
+//		for (int i = 1; i <= j; i++) {
+//			if (num[i - 1] > num[i]) {
+//
+//				temp = num[i];
+//				num[i] = num[i - 1];
+//				num[i - 1] = temp;
+//
+//			}
+//		}
+//	}
+//	
+//
+//	for (int i = 0; i < 4; i++) {
+//		printf("%d ", num[i]);
+//	}
 //}
 
 #include<stdio.h>
-int main()
-{
-	int floor;
-	printf("몇층의 피라미드를 쌓을 것입니까?");
-	scanf_s("%d", &floor);
-	
-	for(int i=1;i<=floor;i++)
-	{
-		for(int j=1;j<=floor-i;j++)
-		{printf(" ");}
-		for (int s = 1; s <= (i-1)*2+1; s++)
-		{
-			printf("*");
-		}
-		printf("\n");
-	}
+void main() {
+	int one = 1, two = 2;
+	int max = 0;
+
+	if (one > two) max = one;
+	else max = two;
+
+	printf("max = %d\n", max);
+
 }
-
-//#include<stdio.h>
-//#include<time.h>
-//#include<stdlib.h>
-//int main()
-//{
-//	srand(time(NULL));
-//	int i = rand() % 100;
-//	int answer;
-//	printf("정답:%d\n", i);
-//	printf("0~99사이의 값을 입력하시오.\n");
-//	
-//	do {
-//		scanf("%d", &answer);
-//
-//		if (answer > i) {
-//			printf("다운\n");
-//		}
-//		else if (answer < i) {
-//			printf("업\n");
-//		}
-//	} while (answer != i);
-//
-//	printf("정답입니다.");
-//	return 0;
-//}
-
-//#include<stdio.h>
-//#include<stdlib.h>
-//#include<time.h>
-//void fail();
-//void success();
-//int getRandomNumber(int level);
-//void showQuestion(int i, int num1, int num2);
-//int main()
-//{
-//	srand(time(NULL));
-//	int count = 0;
-//	int answer = 0;
-//	for(int i = 1; i <= 5; i++)
-//	{
-//		int num1 = getRandomNumber(i);
-//		int num2 = getRandomNumber(i);
-//		showQuestion(i,num1,num2);
-//		scanf_s("%d", &answer);
-//		if (answer == num1 * num2)
-//		{
-//			success();
-//			count++;
-//		}
-//		else
-//		{
-//			fail();
-//		}
-//		
-//	}
-//	return 0;
-//}
-//
-//
-//void fail()
-//{
-//	printf("오답입니다.");
-//}
-//void success()
-//{
-//	printf("\n정답입니다\n");
-//}
