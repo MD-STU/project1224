@@ -1,0 +1,12 @@
+package A;
+
+import java.util.Scanner;
+
+public class 안녕 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
